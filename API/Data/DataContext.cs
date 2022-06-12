@@ -9,6 +9,11 @@ namespace API.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.UseSerialColumns();
+        } 
+        
         public DbSet<AppUser> Users { get; set; }
     }
 }
